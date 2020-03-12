@@ -14,7 +14,7 @@ spring:
         driverClassName: com.mysql.jdbc.Driver
         url: jdbc:mysql://localhost:3306/seata?useSSL=false&serverTimezone=UTC
         username: root
-        password: 123456
+        password: root
         poolPingConnectionsNotUsedFor: 60000
         removeAbandoned: true
         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
@@ -34,12 +34,12 @@ spring:
             user: admin
             password: admin
 
-    jpa: 
+    jpa:
         hibernate:
             ddl-auto: none
         show-sql: true
     dubbo:
         server: true
-        registry: zookeeper://localhost:2181
+        registry: zookeeper://10.99.65.94:2181
         provider:
             port: 20999
